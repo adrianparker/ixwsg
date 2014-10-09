@@ -1,5 +1,6 @@
 /**
  * Removes whitespace only from between nodes of an XML document.
+ *
  * Also removes any leading or trailing whitespace, that is, whitespace before the first < or after the last >.
  * Presumes XML is well-formed and is demarcated by < and > characters.  If you pass partial XML nodes then
  * you may experience data loss. But you wouldn't do that now would you.
