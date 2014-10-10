@@ -42,7 +42,7 @@ describe('#gobble', function () {
 	it('removes a mixture of whitespaces', function () {
 		gobble('\f<xml>\v<a>\f<b>\r</b>\f</a><c>\f<d>\n</d></c>\f\t\n</xml>\v\f').should.equal('<xml><a><b></b></a><c><d></d></c></xml>');
 	});
-	it('removes whitespace from a sample header', function () {
+	it('removes whitespace from a real world sample', function () {
 		var sample = '<soapenv:Header>		<serviceHeaderXxxx xmlns="http://xml.xxx.co.nz/xxxintegrationcommon/xxxServiceHeaderXxxx">			<user>    <channel>xxxx</channel>        <id idType="AccessId"/>                <subId/>                    </user>    <application>    <id/>             </application>		</serviceHeaderXxxx>	</soapenv:Header>';
 		var expected = '<soapenv:Header><serviceHeaderXxxx xmlns="http://xml.xxx.co.nz/xxxintegrationcommon/xxxServiceHeaderXxxx"><user><channel>xxxx</channel><id idType="AccessId"/><subId/></user><application><id/></application></serviceHeaderXxxx></soapenv:Header>';
 		gobble(sample).should.equal(expected);
