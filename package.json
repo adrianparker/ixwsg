@@ -1,6 +1,6 @@
 {
 	"name": "ixwsg",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Intra-XML White Space Gobbler",
 	"main": "index.js",
 	"scripts": {
